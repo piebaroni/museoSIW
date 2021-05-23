@@ -8,13 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <header><h1>Nome Museo</h1></header>
-        <ul>
-            <li><a href="listaArtisti">I nostri Artisti</a></li>
-            <li><a href="listaCollezioni">Collezioni</a></li>
-            <li><a href="listaOpere">Ricerca Opere</a></li>
-            <li id = "right"><a href="accessoAmministratore">Accedi come amministratore</a></li>
-        </ul>
+        <div th:replace="fragments/base.html::header"></div>
         <h2>Le nostre opere più importanti</h2>
         <section>
 

@@ -1,20 +1,46 @@
 body{
-    font-family: sans-serif;
-    margin: 0 auto;
-    background-color: beige;
-  }
+  font-family: sans-serif;
+  margin: 0 auto;
+  background-color: beige;
+}
 
 header {
-    background-image: url(/images/header.webp);
-    height: 75px;
-  }
+  background-image: url(/images/header.webp);
+  height: 75px;
+}
 
-  h1{
-    text-align: center;
-    padding-top: 5px;
-    font-size: 70px;
-    font-family: 'Qwigley', cursive;
-  }
+h1{
+  text-align: center;
+  padding-top: 5px;
+  font-size: 70px;
+  font-family: 'Qwigley', cursive;
+}
+
+.navbar {
+  list-style-type: none;
+  margin-top: 5px;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(240, 240, 238);
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: beige;
+}
+
+#right{
+    float: right;
+}
+
 
 h2{
     text-align: left;
@@ -24,12 +50,12 @@ h2{
     margin-bottom: 0px;
   }
 
-  li{
+li{
     font-size: 20px;
     margin-top: 5px;
   }
   
-  a{
+li a{
     background-color: rgb(240, 240, 238);
     text-decoration: none;
   }
@@ -38,7 +64,3 @@ h2{
     background-color: beige;
   }
   
-  footer {
-      background-color: black;
-      height: 100px;
-    }

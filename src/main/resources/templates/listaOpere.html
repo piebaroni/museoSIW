@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <header><h1>Nome Museo</h1></header>
+    <div th:replace="fragments/base.html::header"></div>
 	<div>
-    	<h2>Lista opere in collezione</h2>
-		<ul>
+    	<h2>Lista opere</h2>
+		<ul id = "lista">
 			<li th:each="opera : ${opere}">
-				<a href="opera.html" 
+				<a href = "opera.html"
 				   th:href="@{'/opera' + '/' + ${opera.id}}" 
-				   th:text="${opera.titolo}">titolo</a>
+				   th:text="|${opera.titolo}|">Titolo</a>
 			</li>
 		</ul>
 	</div>

@@ -1,7 +1,5 @@
 package it.uniroma3.siw.museo.model;
 
-import java.time.Year;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,7 +21,7 @@ public class Opera {
 	private String descrizione;
 	
 	@Column(nullable = false)
-	private Year anno;
+	private int anno;
 	
 	@ManyToOne
 	private Collezione collezione;
@@ -64,12 +62,12 @@ public class Opera {
 		this.descrizione = descrizione;
 	}
 
-	public Year getAnno() {
+	public int getAnno() {
 		return anno;
 	}
 
 	public void setAnno(int anno) {
-		this.anno = java.time.Year.of(anno);
+		this.anno = anno;
 	}
 
 	public Collezione getCollezione() {

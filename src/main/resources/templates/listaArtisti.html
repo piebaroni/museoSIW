@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <header><h1>Nome Museo</h1></header>
+    <div th:replace="fragments/base.html::header"></div>
 	<div>
     	<h2>Lista artisti</h2>
 		<ul>
 			<li th:each="artista : ${artisti}">
-				<a href="artista.html" 
+				<a href = "artista.html"
 				   th:href="@{'/artista' + '/' + ${artista.id}}" 
 				   th:text="|${artista.nome} ${artista.cognome}|">Leonardo Da Vinci</a>
 			</li>
@@ -24,3 +24,4 @@
 	</div>
 	<footer></footer>
 </body>
+</html>
