@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>ARTISTA</title>
+        <link rel="stylesheet" th:href="@{/css/artista.css}" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div th:if="${opera}" th:object="${opera}">
+            <header><h1 th:text="${opera.titolo}">Nome Opera</h1></header>
+            <section id = "left">
+                <div>
+                    <img src = "${opera.linkFoto}"/>
+                </div>
+             </section>
+             <section id = "right">
+                 <h2>Descrizione:</h2>
+                 <p th:text= "*{descrizione}">descrizione completa</p>
+                </section>
+        </div>
+        <div th:unless="${opera}">Non esiste</div>
+    </body>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="${title}"></title>
+        <link rel="stylesheet" th:href="@{/css/accesso.css}" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header><h1>Nome Museo</h1></header>
+        <section>
+            <div>
+                <h4>Accesso come amministratore</h4>
+            </div>
+            <form th:action="@{/amministratore}" method="POST" th:object="${amministratore}">
+                <div th:if="${#fields.hasGlobalErrors()}">
+                    <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
+                </div>		
+                <div>		
+                    <div>
+                        <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span><br>
+                        <span>Password:</span>
+                        <span><input type="password" th:field="*{password}" /></span></br>
+                    </div>
+                    <div>
+                        <span><button type="submit">Invio</button></span>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </body>
+</html>

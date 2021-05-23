@@ -1,0 +1,82 @@
+body{
+    font-family: sans-serif;
+    margin: 0 auto;
+    background-color: beige;
+  }
+  
+  nav {
+    background-image: url(/images/header.webp);
+    height: 75px;
+  }
+  
+  h1{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 70px;
+    font-family: 'Qwigley', cursive;
+  }
+  
+  #left {
+    float: left;
+    height: 200px;
+    width: 383px;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  
+  div{
+    width: 300px;
+    height: max-content;
+  }
+  div img{
+    width: 200%;
+    height: 400%;
+  }
+  
+  #right{
+    float: right;
+    height: auto;
+    width: 600px;
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-bottom: 100px;
+  }
+  
+  #right h2{
+    text-align: left;
+    font-family: 'Qwigley', cursive;
+    font-size: 45px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+  
+  #artista{
+    clear: both;
+    height: 500px;
+    width: auto;
+  }
+  
+  a{
+    text-align: center;
+    text-decoration: none;
+    color: darkslategrey;
+    position: relative;
+    top: 270px;
+  }
+  
+  h3{
+    background-color: rgb(240, 240, 238);
+    text-align: center;
+    font-family: 'Qwigley', cursive;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  h3:hover{
+    background-color: beige;
+  }

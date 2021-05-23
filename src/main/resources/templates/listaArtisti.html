@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+	<title>Lista Artisti</title>
+	<link rel="stylesheet" th:href="@{/css/lista.css}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header><h1>Nome Museo</h1></header>
+	<div>
+    	<h2>Lista artisti</h2>
+		<ul>
+			<li th:each="artista : ${artisti}">
+				<a href="artista.html" 
+				   th:href="@{'/artista' + '/' + ${artista.id}}" 
+				   th:text="|${artista.nome} ${artista.cognome}|">Leonardo Da Vinci</a>
+			</li>
+		</ul>
+	</div>
+	<div>
+		<a href="addArtista">Aggiungi Artista</a>
+	</div>
+	<footer></footer>
+</body>
