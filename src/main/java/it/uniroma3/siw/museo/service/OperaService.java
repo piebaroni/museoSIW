@@ -1,15 +1,10 @@
 package it.uniroma3.siw.museo.service;
 
-import java.time.Year;
 import java.util.List;
 import java.util.Optional;
-
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import it.uniroma3.siw.museo.model.Artista;
-import it.uniroma3.siw.museo.model.Collezione;
 import it.uniroma3.siw.museo.model.Opera;
 import it.uniroma3.siw.museo.repository.OperaRepository;
 
@@ -28,16 +23,16 @@ public class OperaService {
 		return or.findByTitolo(titolo);
 	}
 	
-	public List<Opera> trovaPerAnno(Year anno){
+	public List<Opera> trovaPerAnno(int anno){
 		return or.findByAnno(anno);
 	}
 	
-	public List<Opera> trovaPerArtista(Artista artista){
-		return or.findByArtista(artista);
+	public List<Opera> trovaPerArtistaId(Long id){
+		return or.findByArtistaId(id);
 	}
 	
-	public List<Opera> trovaPerArtistaETitolo(Artista artista,String titolo){
-		return or.findByArtistaAndTitolo(artista, titolo);
+	public List<Opera> trovaPerArtistaETitolo(Long id,String titolo){
+		return or.findByArtistaIdAndTitolo(id, titolo);
 	}
 	
 	public List<Opera> findAll(){
@@ -59,7 +54,7 @@ public class OperaService {
 	}
 
 	
-	public List<Opera> trovaPerCollezione(Collezione c) {
-		return or.findByCollezione(c);
+	public List<Opera> trovaPerCollezioneId(Long id) {
+		return or.findByCollezioneId(id);
 	}
 }

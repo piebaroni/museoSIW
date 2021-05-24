@@ -11,7 +11,7 @@
     <div th:replace="fragments/base.html::header"></div>
 	<div>
     	<h2>Lista opere</h2>
-		<ul id = "lista">
+		<ul>
 			<li th:each="opera : ${opere}">
 				<a href = "opera.html"
 				   th:href="@{'/opera' + '/' + ${opera.id}}" 
@@ -19,4 +19,5 @@
 			</li>
 		</ul>
 	</div>
+	<footer th:replace="fragments/base.html :: fondo"></footer>
 </body>

@@ -9,12 +9,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import it.uniroma3.siw.museo.model.Artista;
 import it.uniroma3.siw.museo.service.ArtistaService;
+import it.uniroma3.siw.museo.service.OperaService;
 
 @Controller
 public class ArtistaController {
 
 	@Autowired
 	private ArtistaService service;
+	
+	@Autowired
+	private OperaService operaService;
 	
 	@RequestMapping(value = "/listaArtisti", method = RequestMethod.GET)
     public String getArtisti(Model model) {
@@ -26,6 +30,7 @@ public class ArtistaController {
     public String getArtista(@PathVariable("id") Long id, Model model) {
     	Artista a = this.service.trovaPerId(id);
     	model.addAttribute("artista", a);
+    	model.addAttribute("opere", operaService.trovaPerArtistaId(a.getId()));
     	return "artista.html";
     }
 	

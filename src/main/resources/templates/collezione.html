@@ -10,8 +10,21 @@
     <body>
         <div th:if="${collezione}" th:object="${collezione}">
             <header><h1 th:text="|${collezione.nome} |">Nome Collezione</h1></header>
-            <strong>Relatore:</strong><span th:text="|*{curatore.nome} *{curatore.cognome}|">qui-va-nome</span><br>
+            <h2>Informazioni principali:</h2>
+            <p><strong>Relatore:</strong><span th:text="|*{curatore.nome} *{curatore.cognome}|">qui-va-nome</span><br></p>
             
+            <h2>Opere</h2>
+            <ul>
+                <li th:each="opera : ${opere}">
+                    <a href = "opera.html"
+                    th:href="@{'/opera' + '/' + ${opera.id}}" 
+                    th:text="|${opera.titolo}|">Titolo Opera</a>,
+                    <a href = "artista.html"
+                    th:href="@{'/artista' + '/' + ${opera.artista.id}}" 
+                    th:text="|${opera.artista.nome} ${opera.artista.cognome}|">Nome Autore</a>
+                </li>
+            </ul>
         </div>
         <div th:unless="${collezione}">Non esiste</div>
+        <footer th:replace="fragments/base.html :: fondo"></footer>
     </body>

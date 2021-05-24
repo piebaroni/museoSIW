@@ -9,9 +9,9 @@
     </head>
     <body>
         <div th:if="${artista}" th:object="${artista}">
-            <header><h1 th:text="|${artista.nome} ${artista.cognome}|">Nome artista</h1></header>
+            <header><h1 th:text = "|${artista.nome} ${artista.cognome}|">Nome artista</h1></header>
             <section id = "left">
-                <h2 th:text="#{header.artista}">Informazioni principali:</h2>
+                <h2>Informazioni principali:</h2>
                     <p>
                         <strong>Nome:</strong><span th:text="*{nome}">qui-va-nome</span><br>
                         <strong>Cognome:</strong><span th:text="*{cognome}">qui-va-cognome</span><br>
@@ -20,10 +20,20 @@
                         <strong>Nazionalità:</strong><span th:text="*{nazione}">qui-va-nazionalità</span><br>
                     </p>
             </section>
-            <section id = "right">
+            <section id = "right2">
                 <h2>Biografia:</h2>
                 <p>biografia completa</p>
             </section>
+            <section id = "opere">
+                <h2>Opere presenti nella galleria</h2>
+                <div class = "galleria" th:each="opera : ${opere}">
+                    <img th:src = "@{image/venere.jpg}"/>
+                    <a href = "opera.html"
+				   th:href="@{'/opera' + '/' + ${opera.id}}" 
+				   th:text="|${opera.titolo}|">Titolo</a>
+                </div>
+            </section>
         </div>
     	<div th:unless="${artista}">Non esiste</div>
+        <footer th:replace="fragments/base.html :: fondo"></footer>
     </body>
