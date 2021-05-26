@@ -11,20 +11,20 @@
         <header><h1>Nome Museo</h1></header>
         <section>
             <div>
-                <h4>Accesso come amministratore</h4>
+                <h4>Accedi</h4>
             </div>
-            <form th:action="@{/amministratore}" method="POST" th:object="${amministratore}">
-                <div th:if="${#fields.hasGlobalErrors()}">
-                    <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
-                </div>		
-                <div>		
+            <form th:action="@{/login}" method="POST">
+                <div>
                     <div>
-                        <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span><br>
+                        <span>Username:</span>
+                        <span><input name="username" type="text" required /></span>
+                    </div>		
+                    <div>
                         <span>Password:</span>
-                        <span><input type="password" th:field="*{password}" /></span></br>
+                        <span><input name="password" type="password" required /></span>
                     </div>
                     <div>
-                        <span><button type="submit">Invio</button></span>
+                        <span><button type="submit">Login</button></span>
                     </div>
                 </div>
             </form>

@@ -2,18 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title th:text="${title}"></title>
-        <link rel="stylesheet" th:href="@{/css/index.css}" />
+        <link rel="stylesheet" th:href="@{/css/home.css}" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <header><h1>Nome Museo</h1></header>
-        <div>
-			<p><a th:href="@{/login}">Accedi</a></p>
-   		</div>
-		<div>
-			<p><a th:href="@{/register}">Registrati</a></p>
-   		</div>
+        <div th:replace="fragments/base.html::header"></div>
+        <h2>Le nostre opere più importanti</h2>
+        <section>
+
+        </section>
     </body>
 </html>
