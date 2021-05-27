@@ -7,6 +7,8 @@ import it.uniroma3.siw.museo.model.Artista;
 public interface ArtistaRepository extends CrudRepository<Artista, Long>{
 	
 	public List<Artista> findByNome(String nome);
+
+	public List<Artista> findByCognome(String cognome);
 	
 	public List<Artista> findByNomeOrCognome(String nome, String cognome);
 	

@@ -51,4 +51,8 @@ public class ArtistaService {
 		if(artisti.size()>0) return true;
 		return false;
 	}
+
+	public List<Artista> trovaPerCognome(String cognome) {
+		return ar.findByCognome(cognome);
+	}
 }

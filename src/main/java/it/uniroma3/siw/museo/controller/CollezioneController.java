@@ -28,7 +28,13 @@ public class CollezioneController {
     }
 
     @RequestMapping(value = "/listaCollezioni", method = RequestMethod.GET)
-    public String getPersone(Model model) {
+    public String getCollezioni(Model model) {
+    		model.addAttribute("collezioni", this.service.findAll());
+    		return "listaCollezioni.html";
+    }
+    
+    @RequestMapping(value = "/admin/listaCollezioni", method = RequestMethod.GET)
+    public String getCollezioniAdmin(Model model) {
     		model.addAttribute("collezioni", this.service.findAll());
     		return "listaCollezioni.html";
     }

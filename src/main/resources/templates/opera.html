@@ -21,5 +21,5 @@
                 </section>
         </div>
         <div th:unless="${opera}">Non esiste</div>
-        <footer th:replace="fragments/base.html :: fondo"></footer>
+        <footer th:replace="fragments/base.html :: fondo(home='/default')"></footer>
     </body>

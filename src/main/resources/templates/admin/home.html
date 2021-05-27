@@ -3,9 +3,16 @@
     <head>
         <title th:text="${title}"></title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" th:href="@{/css/home.css}" />
         <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <h1>ADMIN PAGE</h1>
+        <div th:replace="fragments/base.html::header"></div>
+        <div>
+			<p><a th:href="@{/addArtista}">Aggiungi un artista</a></p>
+   		</div>
+        <div>
+			<p><a th:href="@{/addOpera}">Aggiungi un'opera</a></p>
+   		</div>
     </body>

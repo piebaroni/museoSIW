@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+	<title>Lista Artisti</title>
+	<link rel="stylesheet" th:href="@{/css/index.css}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header><h1>Nome Museo</h1></header>
+    <form th:action="@{/admin/opera}" method="POST" th:object="${opera}">
+        <div th:if="${#fields.hasGlobalErrors()}">
+            <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
+        </div>		
+        <div>
+            <div>
+                <span th:if="${#fields.hasErrors('titolo')}" th:errors="*{titolo}"></span>
+                <span>Titolo:</span>
+                <span><input type="text" th:field="*{titolo}" /></span>
+            </div>	
+            <div>
+                <span th:if="${#fields.hasErrors('anno')}" th:errors="*{anno}"></span>
+                <span>Anno di realizzazione:</span>
+                <span><input type="text" th:field="*{anno}" /></span>
+            </div>
+            <div>
+                <span th:if="${#fields.hasErrors('descrizione')}" th:errors="*{descrizione}"></span>
+                <span>Descrizione:</span>
+                <span><input type="text" th:field="*{descrizione}" /></span>
+            </div>
+            <div>
+                <span><button type="submit">Invio</button></span>
+            </div>
+        </div>
+    </form>
+    <footer th:replace="fragments/base.html :: fondo(home='/default')"></footer>
+</body>
+</html>
