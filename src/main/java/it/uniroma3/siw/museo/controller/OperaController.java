@@ -21,9 +21,6 @@ public class OperaController {
 	@Autowired
 	private OperaValidator validator;
 
-	@Autowired
-	private ArtistaService artistaService;
-
 	@RequestMapping(value = "/opera/{id}", method = RequestMethod.GET)
 	public String getOpera(@PathVariable("id") Long id, Model model) {
 		model.addAttribute("opera", this.service.trovaPerId(id));
@@ -35,14 +32,8 @@ public class OperaController {
 		model.addAttribute("opere", this.service.findAll());
 		return "listaOpere.html";
 	}
-	
-	@RequestMapping(value = "/admin/listaOpere", method = RequestMethod.GET)
-	public String getOpereAdmin(Model model) {
-		model.addAttribute("opere", this.service.findAll());
-		return "listaOpere.html";
-	}
 
-	@RequestMapping(value = "/addOpera", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin/addOpera", method = RequestMethod.GET)
 	public String addOpera(Model model) {
 		model.addAttribute("opera", new Opera());
 		return "operaForm.html";

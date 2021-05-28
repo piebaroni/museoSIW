@@ -31,12 +31,6 @@ public class ArtistaController {
     		return "listaArtisti.html";
     }
 	
-	@RequestMapping(value = "/admin/listaArtisti", method = RequestMethod.GET)
-    public String getArtistiAdmin(Model model) {
-    		model.addAttribute("artisti", this.service.findAll());
-    		return "listaArtisti.html";
-    }
-	
 	@RequestMapping(value = "/artista/{id}", method = RequestMethod.GET)
     public String getArtista(@PathVariable("id") Long id, Model model) {
     	Artista a = this.service.trovaPerId(id);
@@ -45,7 +39,7 @@ public class ArtistaController {
     	return "artista.html";
     }
 	
-	@RequestMapping(value = "/addArtista", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin/addArtista", method = RequestMethod.GET)
 	public String addArtista(Model model) {
 		model.addAttribute("artista", new Artista());
 		return "artistaForm.html";
@@ -61,12 +55,4 @@ public class ArtistaController {
 		}
 		return "artistaForm.html";
 	}
-	
-	@RequestMapping(value = "/admin/artista/{id}", method = RequestMethod.GET)
-    public String getArtistaAdmin(@PathVariable("id") Long id, Model model) {
-    	Artista a = this.service.trovaPerId(id);
-    	model.addAttribute("artista", a);
-    	model.addAttribute("opere", operaService.trovaPerArtistaId(a.getId()));
-    	return "admin/artista.html";
-    }
 }
