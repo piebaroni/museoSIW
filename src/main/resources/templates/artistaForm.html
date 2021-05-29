@@ -10,39 +10,45 @@
 <body>
     <header><h1>Nome Museo</h1></header>
     <form th:action="@{/admin/artista}" method="POST" th:object="${artista}">
-        <div th:if="${#fields.hasGlobalErrors()}">
-            <p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
-        </div>		
-        <div>
-            <div>
-                <span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
-                <span>Nome:</span>
-                <span><input type="text" th:field="*{nome}" /></span>
-            </div>		
-            <div>
-                <span th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"></span>
-                <span>Cognome:</span>
-                <span><input type="text" th:field="*{cognome}" /></span>
-            </div>
-            <div>
-                <span th:if="${#fields.hasErrors('dataNascita')}" th:errors="*{dataNascita}"></span>
-                <span>Data di nascita:</span>
-                <span><input type="date" th:field="*{dataNascita}" /></span>
-            </div>
-            <div>
-                <span th:if="${#fields.hasErrors('luogoNascita')}" th:errors="*{luogoNascita}"></span>
-                <span>Luogo di Nascita:</span>
-                <span><input type="text" th:field="*{luogoNascita}" /></span>
-            </div>
-            <div>
-                <span th:if="${#fields.hasErrors('nazione')}" th:errors="*{nazione}"></span>
-                <span>Nazionalità:</span>
-                <span><input type="text" th:field="*{nazione}" /></span>
-            </div>
-            <div>
-                <span><button type="submit">Invio</button></span>
-            </div>
-        </div>
+        <table>
+            <tr>
+                <td th:if="${#fields.hasGlobalErrors()}" th:errors=${duplicato} th:style="'color:red'"></td>
+            </tr>
+            <tr>
+                <td>Nome:</td>
+                <td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"  th:style="'color:red'"></td>
+                <td><input type="text" placeholder="nome" required
+                th:field="*{nome}"/></td>
+            </tr>
+            <tr>
+                <td>Cognome:</td>
+                <td th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"  th:style="'color:red'"></td>
+                <td><input type="text" placeholder="cognome" required
+                th:field="*{cognome}"/></td>
+            </tr>
+            <tr>
+                <td>Data di nascita:</td>
+                <td th:if="${#fields.hasErrors('dataNascita')}" th:errors="*{dataNascita}"  th:style="'color:red'"></td>
+                <td><input type="date" required th:field="*{cognome}"/></td>
+            </tr>
+            <tr>
+                <td>Luogo di nascita:</td>
+                <td th:if="${#fields.hasErrors('luogoNascita')}" th:errors="*{luogoNascita}"  th:style="'color:red'"></td>
+                <td><input type="text" placeholder="luogo di nascita" required
+                th:field="*{luogoNascita}"/></td>
+            </tr>
+            <tr>
+                <td>Nazionalità:</td>
+                <td th:if="${#fields.hasErrors('nazione')}" th:errors="*{nazione}"  th:style="'color:red'"></td>
+                <td><input type="text" placeholder="nazione" required
+                th:field="*{nazione}"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Inserisci</button>
+                </td>
+            </tr>
+        </table>
     </form>
     <footer th:replace="fragments/base.html :: fondo(home='/default')"></footer>
 </body>

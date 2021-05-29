@@ -43,11 +43,6 @@ public class AuthenticationController {
 		return "index.html";
 	}
 	
-	@RequestMapping(value = "/admin/logout", method = RequestMethod.GET) 
-	public String logoutAdmin(Model model) {
-		return "index.html";
-	}
-
 	@RequestMapping(value = "/default", method = RequestMethod.GET)
 	public String defaultAfterLogin(Model model) {
 

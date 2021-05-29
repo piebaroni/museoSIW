@@ -12,7 +12,7 @@
             <header><h1 th:text="|${collezione.nome} |">Nome Collezione</h1></header>
             <h2>Informazioni principali:</h2>
             <p><strong>Relatore:</strong><span th:text="|*{curatore.nome} *{curatore.cognome}|">qui-va-nome</span><br></p>
-            
+            <p><strong>Descrizione:</strong><span th:text="|*{descrizione}|">qui-va-descrizione</span></p>
             <h2>Opere</h2>
             <ul>
                 <li th:each="opera : ${opere}">
