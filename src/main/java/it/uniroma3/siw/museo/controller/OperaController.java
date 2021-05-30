@@ -20,6 +20,9 @@ public class OperaController {
 
 	@Autowired
 	private OperaValidator validator;
+	
+	@Autowired
+	private ArtistaService artistaService;
 
 	@RequestMapping(value = "/opera/{id}", method = RequestMethod.GET)
 	public String getOpera(@PathVariable("id") Long id, Model model) {
@@ -36,6 +39,7 @@ public class OperaController {
 	@RequestMapping(value = "/admin/addOpera", method = RequestMethod.GET)
 	public String addOpera(Model model) {
 		model.addAttribute("opera", new Opera());
+		model.addAttribute("artisti", artistaService.findAll());
 		return "operaForm.html";
 	}
 

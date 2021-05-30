@@ -9,7 +9,7 @@
 </head>
 <body>
     <header><h1>Nome Museo</h1></header>
-    <form th:action="@{/admin/opera}" method="POST" th:object="${opera}">
+    <form th:action="@{/admin/collezione}" method="POST" th:object="${collezione}">
         <table>
             <tr>
                 <td th:if="${#fields.hasGlobalErrors()}"></td>
@@ -17,15 +17,9 @@
             </tr>
             <tr>
                 <td>Titolo:</td>
-                <td th:if="${#fields.hasErrors('titolo')}" th:errors="*{titolo}"></td>
+                <td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></td>
                 <td><input type="text" placeholder="titolo" required
-                th:field="*{titolo}"/></td>
-            </tr>
-            <tr>
-                <td>Anno di realizzazione:</td>
-                <td th:if="${#fields.hasErrors('anno')}" th:errors="*{anno}"></td>
-                <td><input type="text" placeholder="anno" required
-                th:field="*{anno}"/></td>
+                th:field="*{nome}"/></td>
             </tr>
             <tr>
                 <td>Descrizione:</td>
@@ -34,10 +28,10 @@
                 th:field="*{descrizione}"/></td>
             </tr>
             <tr>
-                <td>ID artista:</td>
-                <td th:if="${#fields.hasErrors('artista.id')}" th:errors="*{artista.id}"></td>
-                <td><input type="text" placeholder="id artista" required
-                th:field="*{artista.id}"/></td>
+                <td>ID curatore:</td>
+                <td th:if="${#fields.hasErrors('curatore.id')}" th:errors="*{curatore.id}"></td>
+                <td><input type="text" placeholder="id curatore" required
+                th:field="*{curatore.id}"/></td>
             </tr>
             <tr>
                 <td>
@@ -47,10 +41,10 @@
         </table>
     </form>
     <div>
-    	<h2>Lista artisti con identificatore</h2>
+    	<h2>Lista curatori con identificatore</h2>
 		<ul>
-			<li th:each="artista : ${artisti}">
-				<p th:text="|${artista.nome} ${artista.cognome}: ${artista.id}|">Nome artista</p>
+			<li th:each="curatore : ${curatori}">
+				<p th:text="|${curatore.nome} ${curatore.cognome}: ${curatore.id}|">Nome curatore</p>
 			</li>
 		</ul>
 	</div>

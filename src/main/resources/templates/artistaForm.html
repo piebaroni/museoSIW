@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
 	<title>Lista Artisti</title>
-	<link rel="stylesheet" th:href="@{/css/index.css}" />
+	<link rel="stylesheet" th:href="@{/css/form.css}" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,34 +12,35 @@
     <form th:action="@{/admin/artista}" method="POST" th:object="${artista}">
         <table>
             <tr>
-                <td th:if="${#fields.hasGlobalErrors()}" th:errors=${duplicato} th:style="'color:red'"></td>
+                <td th:if="${#fields.hasGlobalErrors()}"></td>
+                <td th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</td>
             </tr>
             <tr>
                 <td>Nome:</td>
-                <td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"  th:style="'color:red'"></td>
+                <td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></td>
                 <td><input type="text" placeholder="nome" required
                 th:field="*{nome}"/></td>
             </tr>
             <tr>
                 <td>Cognome:</td>
-                <td th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"  th:style="'color:red'"></td>
+                <td th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"></td>
                 <td><input type="text" placeholder="cognome" required
                 th:field="*{cognome}"/></td>
             </tr>
             <tr>
                 <td>Data di nascita:</td>
-                <td th:if="${#fields.hasErrors('dataNascita')}" th:errors="*{dataNascita}"  th:style="'color:red'"></td>
+                <td th:if="${#fields.hasErrors('dataNascita')}" th:errors="*{dataNascita}"></td>
                 <td><input type="date" required th:field="*{cognome}"/></td>
             </tr>
             <tr>
                 <td>Luogo di nascita:</td>
-                <td th:if="${#fields.hasErrors('luogoNascita')}" th:errors="*{luogoNascita}"  th:style="'color:red'"></td>
+                <td th:if="${#fields.hasErrors('luogoNascita')}" th:errors="*{luogoNascita}"></td>
                 <td><input type="text" placeholder="luogo di nascita" required
                 th:field="*{luogoNascita}"/></td>
             </tr>
             <tr>
                 <td>Nazionalità:</td>
-                <td th:if="${#fields.hasErrors('nazione')}" th:errors="*{nazione}"  th:style="'color:red'"></td>
+                <td th:if="${#fields.hasErrors('nazione')}" th:errors="*{nazione}"></td>
                 <td><input type="text" placeholder="nazione" required
                 th:field="*{nazione}"/></td>
             </tr>
