@@ -27,7 +27,7 @@
             <section id = "opere">
                 <h2>Opere presenti nella galleria</h2>
                 <div class = "galleria" th:each="opera : ${opere}">
-                    <img th:src = "@{image/venere.jpg}"/>
+                    <img th:src="@{/images/{image}(image=${opera.linkFoto})}">
                     <a href = "opera.html"
 				   th:href="@{'/opera' + '/' + ${opera.id}}" 
 				   th:text="|${opera.titolo}|">Titolo</a>
