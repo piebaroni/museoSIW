@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title th:text="${title}"></title>
-        <link rel="stylesheet" th:href="@{/css/accesso.css}" />
+        <link rel="stylesheet" th:href="@{/css/index.css}" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,19 +14,21 @@
                 <h4>Accedi</h4>
             </div>
             <form th:action="@{/login}" method="POST">
-                <div>
-                    <div>
-                        <span>Username:</span>
-                        <span><input name="username" type="text" required /></span>
-                    </div>		
-                    <div>
-                        <span>Password:</span>
-                        <span><input name="password" type="password" required /></span>
-                    </div>
-                    <div>
-                        <span><button type="submit">Login</button></span>
-                    </div>
-                </div>
+                <table>
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="text" placeholder="username" name="username"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" placeholder="password" name="password"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit">Accedi</button>
+                        </td>
+                    </tr>
+                </table>
             </form>
         </section>
     </body>

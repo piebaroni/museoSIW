@@ -1,9 +1,18 @@
+body{
+  font-family: sans-serif;
+  margin: 0 auto;
+  background-color: beige;
+  text-align: center;
+}
+
 .top{
   background:white;
 }
+
 #login{
   text-align:right;
 }
+
 img{
 	display: block;
     margin-left: auto;
@@ -11,25 +20,26 @@ img{
 	width: 50px;
 } 
   .menu{
-      font-family: 'Courier New', monospace;
+    font-family: 'Courier New', monospace;
     text-align:center;
   }
+
 h1{
   text-align: center;
   font-size:28px;
-   font-family: 'Courier New', monospace;
+  font-family: 'Courier New', monospace;
   color:#28B2A4;
 }
+
 h4{
   margin-top:-25px;
   text-align: center;
-   font-family: 'Courier New', monospace;
-  
+  font-family: 'Courier New', monospace;
 }
+
 a{
 	margin: 5px;
 }
-
 
 .quadro{
   display:flex;
@@ -39,52 +49,34 @@ a{
   margin-top:-20px;
   margin-left:0px;
   margin-right:0px;
-
 }
+
 .quadro1{
   flex-grow:3;
 }
+
 .quadro2{
   flex-grow:1.5;  
 }
+
 .quadro3{
   flex-grow:2
 }
+
 .quadro4{
   flex-grow:0.5;
 }
-.a{
-  background:black;
-  color:white;
-  font-family: 'Courier New';
-  width:230px;
-  text-align:left;
-  padding-left:10px;
-  margin-left:30%;
-  font-size:30px;
+
+a{
+	margin: 5px;
+  text-decoration: none;
+  color: black;
 }
-.b{
-  background:#E6E6E6;
-  width:230px;
-  text-align:left;
-  padding-left:10px;
-  margin-left:30%;
-  margin-top:-30px;
-  font-size:21px;
-  padding-top:10px;
+
+a:hover{
+  background-color: beige;
 }
-.c{
-  background:#E6E6E6;
-  width:230px;
-  text-align:left;
-  padding-left:10px;
-  margin-left:30%;
-  margin-top:-31px;
-  font-size:15px;
-  padding-top:10px;
-  color:grey;
-  height:65px;
-}
+
 footer{
   background: white;
   text-align:center;
@@ -92,33 +84,3 @@ footer{
   font-size:10px;
 }
 
-
-
-
-
-
-
-
-body{
-  font-family: sans-serif;
-  margin: 0 auto;
-  background-color: beige;
-  text-align: center;
-}
-
-a{
-  text-decoration: none;
-  color: black;
-}
-
-
-
-div{
-  text-align:right;
-  background: white;
-}
-
-
-a:hover{
-  background-color: beige;
-}

@@ -6,42 +6,23 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-         
-  <nav class="top">
-        <div id="login">
-         <a th:href="@{/login}">Accedi</a>
-        <a th:href="@{/register}">Registrati</a>
-        </div>
-       <img src="images/SoloMuseo.png"/></img>
-    <h1> Museo SIW </h1> 
-  <h4> Di Nepi-Baroni</h4>
-          <div class="menu">
-            <a> STRUTTURA <a>
-            <a> NOTIZIE <a>
-            <a> OPERE <a>
-            <a> FAQ <a>
-          </div>
-  </nav>
     </head>
-    <body> 
-     <nav class="quadro">
-    <img class="quadro1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Untitled_%28First_Abstract_Watercolor%29_by_Wassily_Kandinsky.jpg/1200px-Untitled_%28First_Abstract_Watercolor%29_by_Wassily_Kandinsky.jpg" <img>
-            <img class="quadro2" src="   https://www.passion-estampes.com/reproduction-toile/mondrian/toile-mondrian-tableau-n1-1921-25-80x60.jpg" <img>
-                
-    
-             <img class="quadro3" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Franz_Marc-Tyrol_%28Tirol%29_%281914%29.jpg" <img>   
-                <img class="quadro4" src="https://www.theartpostblog.com/wp-content/uploads/2017/07/Red-Balloon-paul-klee.jpg" <img>
-              </nav>
-              <p class="a">Mostra Corrente <p>
-              <p class="b"> Astrattismo:<p>
-              <p class="b">L'inizio del 900 <p>
-              <p class="c"> termina 30/7/21 <p>
-              <p id="spazio" </p>
-              <p class="b"> Impressionismo:<p>
-              <p class="b">Fine del 800 <p>
-              <p class="c"> termina 10/8/21 <p>
-              
-              <p class="news"> ultime notizie <p>
-              <footer> © 2021 Museo SIW Di Nepi - Baroni </footer>
+    <body>
+      <nav class="top">
+        <div id="login">
+          <a th:href="@{/login}">Accedi</a>
+          <a th:href="@{/register}">Registrati</a>
+        </div>
+        <img src="images/SoloMuseo.png"/></img>
+        <h1> Museo SIW </h1> 
+        <h4> Di Nepi-Baroni</h4>
+      </nav>
+      <nav class="quadro">
+        <img class="quadro1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Untitled_%28First_Abstract_Watercolor%29_by_Wassily_Kandinsky.jpg/1200px-Untitled_%28First_Abstract_Watercolor%29_by_Wassily_Kandinsky.jpg"> <img>
+        <img class="quadro2" src="   https://www.passion-estampes.com/reproduction-toile/mondrian/toile-mondrian-tableau-n1-1921-25-80x60.jpg"> <img>
+        <img class="quadro3" src="https://upload.wikimedia.org/wikipedia/commons/8/86/Franz_Marc-Tyrol_%28Tirol%29_%281914%29.jpg"> <img>   
+        <img class="quadro4" src="https://www.theartpostblog.com/wp-content/uploads/2017/07/Red-Balloon-paul-klee.jpg"> <img>
+      </nav>
+        <footer th:replace="fragments/base.html :: fondo1"></footer>
     </body>
 </html>
