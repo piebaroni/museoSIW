@@ -31,7 +31,6 @@ a{
   flex:auto;
   justify-content: center;
   height:400px;
-  margin-top:-20px;
   margin-left:0px;
   margin-right:0px;
 
@@ -67,4 +66,12 @@ a{
 
 a:hover{
   background-color: #28B2A4;
+}
+p{
+  font-size:28px;
+   font-family: 'Courier New', monospace;
+  color:#28B2A4;	
+}
+.tastoHome{
+	color:white;
 }

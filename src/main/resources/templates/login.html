@@ -8,10 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <header><h1>Nome Museo</h1></header>
+        <nav class="top">
+       	<img src="images/SoloMuseo.png"/></img>
+    	<h1> Museo SIW </h1> 
+  		<h4> Di Nepi-Baroni</h4>
+  		</nav>
         <section>
             <div>
-                <h4>Accedi</h4>
+                <p>Accedi</p>
             </div>
             <form th:action="@{/login}" method="POST">
                 <table>
@@ -31,5 +35,6 @@
                 </table>
             </form>
         </section>
+     <footer th:replace="fragments/base.html :: fondo1"></footer>
     </body>
 </html>
