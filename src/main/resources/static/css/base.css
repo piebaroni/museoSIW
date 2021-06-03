@@ -28,8 +28,12 @@ h4{
 }
 
 footer{
-  background: white;
+  background: black;
+  color:white;
   text-align:center;
   font-family: 'Courier New', monospace;
   font-size:10px;
+}
+.tastoHome{
+	color:white;
 }
