@@ -1,7 +1,7 @@
 body{
     font-family: sans-serif;
     margin: 0 auto;
-    text-align: center;
+   
   }
   
   .top{
@@ -47,6 +47,7 @@ body{
       color:white;
       font-size:32px;
       padding:10px;
+      margin-left:10%;
     }
     
     li{

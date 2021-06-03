@@ -37,8 +37,7 @@ h4{
   flex:auto;
   justify-content: center;
   height:400px;
-  margin-left:0px;
-  margin-right:0px;
+  margin-top:10px;
 
 }
 
@@ -99,6 +98,7 @@ footer{
   text-align:center;
   font-family: 'Courier New', monospace;
   font-size:10px;
+  margin-top:10px;
 }
 
 a:hover{
@@ -109,4 +109,11 @@ a{
   text-decoration: none;
   margin: 5px;
   color: black;
+  margin:10px;
+  font-size:21px;
+}
+p{
+  font-size:28px;
+   font-family: 'Courier New', monospace;
+  color:#28B2A4;	
 }
