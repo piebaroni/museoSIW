@@ -1,72 +1,54 @@
-body{
-  font-family: sans-serif;
-  margin: 0 auto;
-  background-color: beige;
-  text-align: center;
-}
-
 .top{
   background:white;
 }
-
+#login{
+  text-align:right;
+}
 img{
 	display: block;
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 	width: 50px;
 } 
-
   .menu{
     font-family: 'Courier New', monospace;
     text-align:center;
   }
-
 h1{
   text-align: center;
   font-size:28px;
-  font-family: 'Courier New', monospace;
+   font-family: 'Courier New', monospace;
   color:#28B2A4;
 }
-
 h4{
   margin-top:-25px;
   text-align: center;
-  font-family: 'Courier New', monospace;  
+   font-family: 'Courier New', monospace;
+  
 }
+
 
 .quadro{
   display:flex;
   flex:auto;
   justify-content: center;
   height:400px;
-  margin-top:-20px;
   margin-left:0px;
   margin-right:0px;
 
 }
-
 .quadro1{
   flex-grow:3;
 }
-
 .quadro2{
   flex-grow:1.5;  
 }
-
 .quadro3{
   flex-grow:2
 }
-
 .quadro4{
   flex-grow:0.5;
 }
-
-a{
-  text-decoration: none;
-  margin: 5px;
-  color: black;
-}
-
 .a{
   background:black;
   color:white;
@@ -99,14 +81,18 @@ a{
   color:grey;
   height:65px;
 }
-
-a:hover{
-  background-color: beige;
-}
-
 footer{
-  background: white;
+  background: rgb(0, 0, 0);
+  color:white;
   text-align:center;
   font-family: 'Courier New', monospace;
   font-size:10px;
+}
+a:hover{
+  background-color: #28B2A4;
+}
+a{
+  text-decoration: none;
+  margin: 5px;
+  color: black;
 }
