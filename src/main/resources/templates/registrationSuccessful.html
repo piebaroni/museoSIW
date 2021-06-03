@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head> </head>
+    <head> 
+        <title th:text="${title}"></title>
+        <link rel="stylesheet" th:href="@{/css/index.css}" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
     <body>
 	    <div>
     	    <h4>Registrazione</h4>
 		    <h1>Congratulazioni ti sei registrato!</h1>
 	    </div>
-        <footer th:replace="fragments/base.html :: fondo"></footer>
+        <footer th:replace="fragments/base.html :: fondo(home='/default')"></footer>
     </body>
 </html>
