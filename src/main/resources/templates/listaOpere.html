@@ -10,7 +10,7 @@
 <body>
     <header th:replace="fragments/base.html::header"></header>
 	<div>
-    	<h2>Lista opere</h2>
+    	<a id="titolo">Lista opere</a>
 		<ul>
 			<li th:each="opera : ${opere}">
 				<a href = "opera.html"

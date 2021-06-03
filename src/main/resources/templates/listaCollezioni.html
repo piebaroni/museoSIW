@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
 	<title th:text="${title}"></title>
-    <link rel="stylesheet" th:href="@{/css/index.css}" />
+    <link rel="stylesheet" th:href="@{/css/lista.css}" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
 <body>
     <div th:replace="fragments/base.html::header"></div>
 	<div>
-    	<h2>Lista collezioni</h2>
+    	<a id="titolo">Lista collezioni</a>
 		<ul>
 			<li th:each="collezione : ${collezioni}">
 				<a href="collezione.html" 
