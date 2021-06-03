@@ -2,13 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title th:text="${title}"></title>
-        <link rel="stylesheet" th:href="@{/css/index.css}" />
+        <link rel="stylesheet" th:href="@{/css/home.css}" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div th:replace="fragments/base.html::header"></div>
+        <div th:replace="fragments/base.html :: header(home='/default')"></div>
         <nav class="quadro">
             <img class="quadro1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Untitled_%28First_Abstract_Watercolor%29_by_Wassily_Kandinsky.jpg/1200px-Untitled_%28First_Abstract_Watercolor%29_by_Wassily_Kandinsky.jpg"> <img>
             <img class="quadro2" src="   https://www.passion-estampes.com/reproduction-toile/mondrian/toile-mondrian-tableau-n1-1921-25-80x60.jpg"> <img>
@@ -24,6 +24,6 @@
         <div>
 			<p><a th:href="@{/admin/addCollezione}">Aggiungi una collezione</a></p>
    		</div>
-           <footer th:replace="fragments/base.html :: fondo1"></footer>
+           <footer th:replace="fragments/base.html :: fondo"></footer>
     </body>
 </html>

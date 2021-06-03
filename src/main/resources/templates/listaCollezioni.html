@@ -2,15 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
 	<title th:text="${title}"></title>
-    <link rel="stylesheet" th:href="@{/css/lista.css}" />
+    <link rel="stylesheet" th:href="@{/css/listaCollezioni.css}" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div th:replace="fragments/base.html::header"></div>
+    <div th:replace="fragments/base.html::header(home='/default')"></div>
 	<div>
-    	<a id="titolo">Lista collezioni</a>
+    	<span id="lista">Lista collezioni</span>
 		<ul>
 			<li th:each="collezione : ${collezioni}">
 				<a href="collezione.html" 
@@ -19,5 +19,5 @@
 			</li>
 		</ul>
 	</div>
-	<footer th:replace="fragments/base.html :: fondo(home='/default')"></footer>
+	<footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
