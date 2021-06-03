@@ -8,29 +8,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <div th:fragment="header">
+  <div th:fragment="header(home)">
     <nav class="top">
       <img src="images/SoloMuseo.png"/></img>
       <h1> Museo SIW </h1>
       <h4> Di Nepi-Baroni</h4>
-            <div class="menu">
-        <a href="listaArtisti">Artisti<a>
-        <a href="listaCollezioni">Collezioni<a>
-        <a href="listaOpere">Opere<a>
-        <a th:href="@{/logout}">Logout<a>
+      <div class="menu">
+        <a id="tastoHome" th:href="@{${home}}">Home</a>
+        <a id="tastoArtisti" th:href="@{/listaArtisti}">Artisti</a>
+        <a id="tastoCollezioni" th:href="@{/listaCollezioni}">Collezioni</a>
+        <a id="tastoOpere" th:href="@{/listaOpere}">Opere</a>
+        <a th:href="@{/logout}">Logout</a>
       </div>
-
     </nav>
   </div>
     
-    <footer th:fragment="fondo(home)">
-		<a class="tastoHome" th:href="@{${home}}">Home</a>
-        © 2021 Museo SIW Di Nepi - Baroni
-	</footer>
-	
-	<footer th:fragment="fondo1">
-        © 2021 Museo SIW Di Nepi - Baroni
-	</footer>
+    <footer th:fragment="fondo"> © 2021 Museo SIW Di Nepi - Baroni </footer>
+
 </body>
 
 </html>

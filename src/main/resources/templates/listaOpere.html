@@ -2,13 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
 	<title>Lista Opere</title>
-	<link rel="stylesheet" th:href="@{/css/lista.css}" />
+	<link rel="stylesheet" th:href="@{/css/listaOpere.css}" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <header th:replace="fragments/base.html::header"></header>
+    <header th:replace="fragments/base.html::header(home='/default')"></header>
 	<div>
     	<h2>Lista opere</h2>
 		<ul>
@@ -19,5 +19,5 @@
 			</li>
 		</ul>
 	</div>
-	<footer th:replace="fragments/base.html :: fondo(home='/default')"></footer>
+	<footer th:replace="fragments/base.html :: fondo"></footer>
 </body>

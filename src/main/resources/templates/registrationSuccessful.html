@@ -12,6 +12,7 @@
     	    <h4>Registrazione</h4>
 		    <h1>Congratulazioni ti sei registrato!</h1>
 	    </div>
-        <footer th:replace="fragments/base.html :: fondo(home='/default')"></footer>
+        <a th:href="@{${home}}">Home</a>
+        <footer th:replace="fragments/base.html :: fondo"></footer>
     </body>
 </html>
