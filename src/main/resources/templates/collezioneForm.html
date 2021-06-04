@@ -20,19 +20,19 @@
             <tr>
                 <td>Titolo:</td>
                 <td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></td>
-                <td><input type="text" placeholder="titolo" required
+                <td><input type="text" placeholder="titolo"
                 th:field="*{nome}"/></td>
             </tr>
             <tr>
                 <td>Descrizione:</td>
                 <td th:if="${#fields.hasErrors('descrizione')}" th:errors="*{descrizione}"></td>
-                <td><input type="text" placeholder="descrizione" required
+                <td><input type="text" placeholder="descrizione"
                 th:field="*{descrizione}"/></td>
             </tr>
             <tr>
                 <td>ID curatore:</td>
                 <td th:if="${#fields.hasErrors('curatore.id')}" th:errors="*{curatore.id}"></td>
-                <td><input type="text" placeholder="id curatore" required
+                <td><input type="text" placeholder="id curatore"
                 th:field="*{curatore.id}"/></td>
             </tr>
             <tr>

@@ -9,8 +9,8 @@
 </head>
 <body>
      <div th:replace="fragments/base.html :: header(home='/default')"></div>
-  		 <p>Aggiungi Opera</p>
-    <form th:action="@{/admin/opera}" method="POST" th:object="${opera}">
+     <p>Aggiungi Opera</p>
+     <form th:action="@{/admin/opera}" method="POST" th:object="${opera}">
         <table>
             <tr>
                 <td th:if="${#fields.hasGlobalErrors()}"></td>
@@ -19,26 +19,37 @@
             <tr>
                 <td>Titolo:</td>
                 <td th:if="${#fields.hasErrors('titolo')}" th:errors="*{titolo}"></td>
-                <td><input type="text" placeholder="titolo" required
+                <td><input type="text" placeholder="titolo" 
                 th:field="*{titolo}"/></td>
             </tr>
             <tr>
                 <td>Anno di realizzazione:</td>
                 <td th:if="${#fields.hasErrors('anno')}" th:errors="*{anno}"></td>
-                <td><input type="text" placeholder="anno" required
+                <td><input type="text" placeholder="anno" 
                 th:field="*{anno}"/></td>
             </tr>
             <tr>
                 <td>Descrizione:</td>
                 <td th:if="${#fields.hasErrors('descrizione')}" th:errors="*{descrizione}"></td>
-                <td><input type="text" placeholder="descrizione" required
+                <td><input type="text" placeholder="descrizione" 
                 th:field="*{descrizione}"/></td>
+            </tr>
+            <tr>
+                <td>Nome file foto:</td>
+                <td th:if="${#fields.hasErrors('linkFoto')}" th:errors="*{linkFoto}"></td>
+                <td><input type="text" placeholder="file foto" 
+                th:field="*{linkFoto}"/></td>
             </tr>
             <tr>
                 <td>ID artista:</td>
                 <td th:if="${#fields.hasErrors('artista.id')}" th:errors="*{artista.id}"></td>
-                <td><input type="text" placeholder="id artista" required
+                <td><input type="text" placeholder="id artista" 
                 th:field="*{artista.id}"/></td>
+            </tr>
+            <tr>
+                <td>ID collezione:</td>
+                <td><input type="text" placeholder="id collezione"
+                th:field="*{collezione.id}"/></td>
             </tr>
             <tr>
                 <td>
@@ -52,6 +63,14 @@
 		<ul>
 			<li th:each="artista : ${artisti}">
 				<p th:text="|${artista.nome} ${artista.cognome}: ${artista.id}|">Nome artista</p>
+			</li>
+		</ul>
+	</div>
+    <div>
+    	<h2>Lista collezioni con identificatore</h2>
+		<ul>
+			<li th:each="collezione : ${collezioni}">
+				<p th:text="|${collezione.nome}: ${collezione.id}|">Nome collezione</p>
 			</li>
 		</ul>
 	</div>
