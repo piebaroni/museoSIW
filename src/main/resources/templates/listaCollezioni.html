@@ -10,7 +10,7 @@
 <body>
     <div th:replace="fragments/base.html::header(home='/default')"></div>
 	<div>
-    	<span id="lista">Lista collezioni</span>
+    	<span id="lista"> Collezioni</span>
 		<ul>
 			<li th:each="collezione : ${collezioni}">
 				<a href="collezione.html" 
