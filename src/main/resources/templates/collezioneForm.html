@@ -2,13 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
 	<title th:text="${title}"></title>
-    <link rel="stylesheet" th:href="@{/css/index.css}" />
+    <link rel="stylesheet" th:href="@{/css/home.css}" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <header><h1>Nome Museo</h1></header>
+          
+  		 <div th:replace="fragments/base.html :: header(home='/default')"></div>
+  		 <p>Aggiungi Collezione</p>
     <form th:action="@{/admin/collezione}" method="POST" th:object="${collezione}">
         <table>
             <tr>
@@ -18,19 +20,19 @@
             <tr>
                 <td>Titolo:</td>
                 <td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></td>
-                <td><input type="text" placeholder="titolo" required
+                <td><input type="text" placeholder="titolo"
                 th:field="*{nome}"/></td>
             </tr>
             <tr>
                 <td>Descrizione:</td>
                 <td th:if="${#fields.hasErrors('descrizione')}" th:errors="*{descrizione}"></td>
-                <td><input type="text" placeholder="descrizione" required
+                <td><input type="text" placeholder="descrizione"
                 th:field="*{descrizione}"/></td>
             </tr>
             <tr>
                 <td>ID curatore:</td>
                 <td th:if="${#fields.hasErrors('curatore.id')}" th:errors="*{curatore.id}"></td>
-                <td><input type="text" placeholder="id curatore" required
+                <td><input type="text" placeholder="id curatore"
                 th:field="*{curatore.id}"/></td>
             </tr>
             <tr>

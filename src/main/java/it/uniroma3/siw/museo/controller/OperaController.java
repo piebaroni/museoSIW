@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import it.uniroma3.siw.museo.model.Opera;
 import it.uniroma3.siw.museo.service.ArtistaService;
+import it.uniroma3.siw.museo.service.CollezioneService;
 import it.uniroma3.siw.museo.service.OperaService;
 
 @Controller
@@ -23,6 +24,9 @@ public class OperaController {
 	
 	@Autowired
 	private ArtistaService artistaService;
+	
+	@Autowired
+	private CollezioneService collezioneService;
 
 	@RequestMapping(value = "/opera/{id}", method = RequestMethod.GET)
 	public String getOpera(@PathVariable("id") Long id, Model model) {
@@ -40,6 +44,7 @@ public class OperaController {
 	public String addOpera(Model model) {
 		model.addAttribute("opera", new Opera());
 		model.addAttribute("artisti", artistaService.findAll());
+		model.addAttribute("collezioni", collezioneService.findAll());
 		return "operaForm.html";
 	}
 
