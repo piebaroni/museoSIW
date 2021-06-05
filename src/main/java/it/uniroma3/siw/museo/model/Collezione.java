@@ -24,6 +24,9 @@ public class Collezione {
 	@Column(nullable = false, length = 2000)
 	private String descrizione;
 	
+	@Column(length = 2000)
+	private String descrizioneCorrente;
+	
 	@ManyToOne
 	private Curatore curatore;
 	
@@ -76,6 +79,15 @@ public class Collezione {
 
 	public void setOpere(List<Opera> opere) {
 		this.opere = opere;
+	}
+
+
+	public String getDescrizioneCorrente() {
+		return descrizioneCorrente;
+	}
+
+	public void setDescrizioneCorrente(String descrizioneCorrente) {
+		this.descrizioneCorrente = descrizioneCorrente;
 	}
 
 }

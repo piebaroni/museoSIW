@@ -43,6 +43,8 @@ public class Artista {
 	@OneToMany(mappedBy = "artista")
 	private List<Opera> opere;
 	
+	private String linkFoto;
+	
 	
 	/*COSTRUTTORE*/
 	public Artista() {
@@ -120,6 +122,14 @@ public class Artista {
 
 	public void setOpere(List<Opera> opere) {
 		this.opere = opere;
+	}
+
+	public String getLinkFoto() {
+		return linkFoto;
+	}
+
+	public void setLinkFoto(String linkFoto) {
+		this.linkFoto = linkFoto;
 	}
 	
 }
