@@ -31,21 +31,10 @@ public class Opera {
 	
 	private String linkFoto;
 	
-	public Opera(Long id,String titolo, String descrizione,int anno,Collezione collezione,Artista artista,String linkFoto) {
-		this.id=id;
-		this.titolo=titolo;
-		this.descrizione=descrizione;
-		this.anno=anno;
-		this.collezione=collezione;
-		this.artista=artista;
-		this.linkFoto=linkFoto;
-	}
-	
 	/*COSTRUTTORE*/
 	public Opera() {
 		
 	}
-	
 	
 	/*GETTERS E SETTERS*/
 	public Long getId() {

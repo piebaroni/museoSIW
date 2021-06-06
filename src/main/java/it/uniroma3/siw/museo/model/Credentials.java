@@ -27,20 +27,15 @@ public class Credentials {
 	@Column(nullable = false)
 	private String role;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.MERGE)
 	private Utente utente;
 	
-	public Credentials(Long id,String username, String password, String role, Utente utente) {
-		this.id=id;
-		this.username=username;
-		this.password=password;
-		this.role=role;
-		this.utente=utente;
-	}
+	/*COSTRUTTORE*/
 	public Credentials() {
 		
 	}
 
+	/*GETTERS E SETTERS*/
 	public Long getId() {
 		return id;
 	}

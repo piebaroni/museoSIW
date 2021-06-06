@@ -16,15 +16,12 @@ public class Utente {
 	
 	private String cognome;
 	
-	public Utente(Long id, String nome, String cognome) {
-		this.id=id;
-		this.nome=nome;
-		this.cognome=cognome;
-	}
-	
+	/*COSTRUTTORE*/
 	public Utente() {
+		
 	}
 
+	/*GETTERS E SETTERS*/
 	public Long getId() {
 		return id;
 	}

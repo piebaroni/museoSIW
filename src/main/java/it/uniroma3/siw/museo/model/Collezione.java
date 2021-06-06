@@ -38,15 +38,6 @@ public class Collezione {
 	public Collezione() {
 		this.opere = new ArrayList<>();
 	}
-	public Collezione(Long id,String nome,String descrizione,String descrizioneCorrente,Curatore curatore) {
-	this.id=id;
-	this.nome=nome;
-	this.descrizione=descrizione;
-	this.descrizioneCorrente=descrizioneCorrente;
-	this.curatore=curatore;
-	this.opere=new ArrayList<>();
-	}
-	
 	
 	/*GETTERS E SETTERS*/
 	public Long getId() {
