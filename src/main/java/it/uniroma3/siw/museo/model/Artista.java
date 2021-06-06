@@ -45,7 +45,18 @@ public class Artista {
 	
 	private String linkFoto;
 	
-	
+	public Artista(Long id,String nome,String cognome,LocalDate dataNascita,String luogoNascita,LocalDate dataMorte,
+			String luogoMorte,String nazione) {
+		this.id=id;
+		this.nome=nome;
+		this.cognome=cognome;
+		this.dataNascita=dataNascita;
+		this.luogoNascita=luogoNascita;
+		this.dataMorte=dataMorte;
+		this.luogoMorte=luogoMorte;
+		this.nazione=nazione;
+		this.opere=new ArrayList<>();
+	}
 	/*COSTRUTTORE*/
 	public Artista() {
 		this.opere = new ArrayList<>();

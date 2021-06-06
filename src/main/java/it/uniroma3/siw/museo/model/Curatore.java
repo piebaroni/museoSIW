@@ -42,7 +42,17 @@ public class Curatore {
 	@OneToMany(mappedBy = "curatore")
 	private List<Collezione> collezioni;
 	
-	
+	public Curatore(Long id, String nome, String cognome, LocalDate dataNascita,String luogoNascita,String email,int matricola,int telefono) {
+		this.id=id;
+		this.nome=nome;
+		this.cognome=cognome;
+		this.dataNascita=dataNascita;
+		this.luogoNascita=luogoNascita;
+		this.email=email;
+		this.matricola=matricola;
+		this.telefono=telefono;
+		this.collezioni=new ArrayList<>();
+	}
 	/*COSTRUTTORE*/
 	public Curatore() {
 		this.collezioni = new ArrayList<>();
