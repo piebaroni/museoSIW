@@ -9,6 +9,11 @@
     </head>
     <body>
     <div th:replace="fragments/base.html :: header(home='/default')"></div>
+    <div id="pagina">
+    	<div>
+         <img id="dipinto" th:src="@{/images/{image}(image=${artista.linkFoto})}">
+    	</div>
+    	<div id="testi">
         <div th:if="${artista}" th:object="${artista}">
             <header><h1 th:text = "|${artista.nome} ${artista.cognome}|">Nome artista</h1></header>
             <section id = "left">
@@ -23,7 +28,7 @@
             </section>
             <section id = "right2">
                 <h2>Biografia:</h2>
-                <p>biografia completa</p>
+                <p>Da inserire</p>
             </section>
             <section id = "opere">
                 <h2>Opere presenti nella galleria</h2>
@@ -35,6 +40,8 @@
             </section>
         </div>
     	<div th:unless="${artista}">Non esiste</div>
+    	</div>
+    </div>
         <footer th:replace="fragments/base.html :: fondo"></footer>
     </body>
 </html>

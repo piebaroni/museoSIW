@@ -1,3 +1,18 @@
+#pagina{
+	margin-top:20px;
+  display:flex;
+}
+
+#dipinto{
+	width:300px;
+}
+
+#testi{
+	margin-left:10px;
+}
+
+
+
 .top{
   background:white;
 }
