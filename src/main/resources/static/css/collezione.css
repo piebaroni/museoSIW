@@ -2,19 +2,10 @@
   background:white;
 }
 
-#pagina{
-	margin-top:20px;
-  display:flex;
-}
 p{
   margin-left:10px;
 }
-#dipinto{
-	width:500px;
-}
-#testi{
-	margin-left:10px;
-}
+
 img{
 	display: block;
   margin-left: auto;
@@ -37,9 +28,9 @@ h1{
 h4{
   margin-top:-25px;
   text-align: center;
-   font-family: 'Courier New', monospace;
-  
+  font-family: 'Courier New', monospace;
 }
+
 footer{
   background: rgb(0, 0, 0);
   color:white;
@@ -59,13 +50,10 @@ a{
   color: black;
   margin:10px;
   font-size:21px;
+  font-family: 'Courier New', monospace;
 }
-#d{
-	font-weight:bold;
-	font-size:25px;
-   font-family: 'Courier New', monospace;
-}
+
 p{
   font-size:20px;
-   font-family: 'Courier New', monospace;
+  font-family: 'Courier New', monospace;
 }
