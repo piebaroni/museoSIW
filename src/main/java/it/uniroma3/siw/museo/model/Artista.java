@@ -33,6 +33,7 @@ public class Artista {
 	@Column(nullable = false)
 	private String luogoNascita;
 	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate dataMorte;
 	
 	private String luogoMorte;
@@ -44,6 +45,9 @@ public class Artista {
 	private List<Opera> opere;
 	
 	private String linkFoto;
+	
+	@Column(length = 2000)
+	private String biografia;
 	
 	/*COSTRUTTORE*/
 	public Artista() {
@@ -129,6 +133,14 @@ public class Artista {
 
 	public void setLinkFoto(String linkFoto) {
 		this.linkFoto = linkFoto;
+	}
+
+	public String getBiografia() {
+		return biografia;
+	}
+
+	public void setBiografia(String biografia) {
+		this.biografia = biografia;
 	}
 	
 }

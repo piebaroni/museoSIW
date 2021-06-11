@@ -101,6 +101,8 @@ public class InizializzaDatabase implements ApplicationListener<ContextRefreshed
 		a1.setLuogoMorte("Neuilly-sur-Seine");
 		a1.setNazione("Russia");
 		a1.setLinkFoto("Vassily-Kandinsky.jpeg");
+		a1.setBiografia("Nato a Mosca nel 1866, Wassily Kandinsky intraprende lo studio dell’ arte sincera all’ età di 30 anni, spostandosi a Monaco di Baviera per studiare disegno e pittura. Un musicista addestrato, Kandinsky si avvicinò al colore con la sensibilità di un musicista.\r\n" + 
+				"\r\n" + "Un'ossessione per Monet lo portò ad esplorare i suoi concetti creativi di colore su tela, a volte controversi tra i suoi contemporanei e critici, ma Kandinsky emerse come stimato leader del movimento artistico astratto all’ inizio del XX secolo.");
 		as.inserisci(a1);
 		
 		Opera o1= new Opera();
@@ -137,6 +139,10 @@ public class InizializzaDatabase implements ApplicationListener<ContextRefreshed
 		a2.setLuogoMorte("New York");
 		a2.setNazione("Olanda");
 		a2.setLinkFoto("PietMondrian.jpg");
+		a2.setBiografia("Piet Mondrian (Pieter Cornelis Mondriaan Jr.) nasce il 7 marzo 1872 ad Amersfoort, in Olanda.\r\n" + 
+				"\r\n" + "Nel 1880 frequenta la scuola che dirige suo padre, calvinista praticante e disegnatore dilettante, che esige da suo figlio un’obbedienza assoluta e vuole che studi come maestro di disegno.\r\n" + 
+				"\r\n" + "Le prime opere del giovane Mondrian - disegni, dipinti e un'incisione - riproducono in uno stile descrittivo e naturalistico.\r\n" + 
+				"\r\n" + "Nel 1889 supera l'esame di stato per l'insegnamento nella scuola elementare conseguendo il diploma di maestro di disegno e prosegue gli studi fino al 1892 quando si qualifica per l'insegnamento del disegno nella scuola media.");
 		as.inserisci(a2);
 		
 		Opera o3=new Opera();
