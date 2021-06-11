@@ -20,6 +20,11 @@
                         <strong>Luogo di nascita:</strong><span th:text="*{luogoNascita}">qui-va-luogo-nascita</span><br>
                         <strong>Nazionalità:</strong><span th:text="*{nazione}">qui-va-nazionalità</span><br>
                     </p>
+                    <p th:if="${artista.dataMorte != null}">
+                        <strong>Data di morte:</strong><span th:text="*{dataMorte}">qui-va-data-morte</span><br>
+                        <strong>Luogo di morte:</strong><span th:text="*{luogoMorte}">qui-va-luogo-di-morte</span><br>
+                    </p>
+                    <p th:unless="${artista.dataMorte == null}"></p>
             </section>
             <section id = "right2">
                 <h2>Biografia:</h2>

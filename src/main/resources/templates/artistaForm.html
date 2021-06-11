@@ -41,6 +41,15 @@
                 th:field="*{luogoNascita}"/></td>
             </tr>
             <tr>
+                <td>Data morte (se avvenuta):</td>
+                <td><input type="date" th:field="*{dataMorte}"/></td>
+            </tr>
+            <tr>
+                <td>Luogo morte (se avvenuta):</td>
+                <td><input type="text" placeholder="luogo morte"
+                th:field="*{luogoMorte}"/></td>
+            </tr>
+            <tr>
                 <td>Nazionalità:</td>
                 <td th:if="${#fields.hasErrors('nazione')}" th:errors="*{nazione}"></td>
                 <td><input type="text" placeholder="nazione"

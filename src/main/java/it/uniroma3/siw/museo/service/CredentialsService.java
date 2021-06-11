@@ -8,8 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 import it.uniroma3.siw.museo.model.Credentials;
 import it.uniroma3.siw.museo.repository.CredentialsRepository;
 
-
-
 @Service
 public class CredentialsService {
 	
