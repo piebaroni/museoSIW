@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import it.uniroma3.siw.museo.model.Credentials;
 import it.uniroma3.siw.museo.model.Utente;
 import it.uniroma3.siw.museo.service.CredentialsService;
+import it.uniroma3.siw.museo.service.UtenteService;
 
 @Controller
 public class AuthenticationController {
@@ -22,6 +23,9 @@ public class AuthenticationController {
 
 	@Autowired
 	private UtenteValidator utenteValidator;
+	
+	@Autowired
+	private UtenteService utenteService;
 
 	@Autowired
 	private CredentialsValidator credentialsValidator;
@@ -61,6 +65,7 @@ public class AuthenticationController {
 		this.credentialsValidator.validate(credentials, credentialsBindingResult);
 		if(!userBindingResult.hasErrors() && ! credentialsBindingResult.hasErrors()) {
 			credentials.setUtente(utente);
+			utenteService.saveUtente(utente);
 			credentialsService.saveCredentials(credentials);
 			return "registrationSuccessful.html";
 		}
