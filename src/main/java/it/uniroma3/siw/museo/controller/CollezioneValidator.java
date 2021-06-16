@@ -28,6 +28,7 @@ public class CollezioneValidator implements Validator{
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nome", "required");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "descrizione", "required");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "curatore.id", "required");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "descrizione.termineMostra", "required");
 		if(!errors.hasErrors()) {
 			logger.debug("confermato: valori non nulli");
 			if(this.collezioneService.alreadyExists((Collezione) target)) {
