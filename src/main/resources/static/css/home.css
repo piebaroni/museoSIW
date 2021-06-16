@@ -33,7 +33,9 @@
   height:65px;
 }
 
-
+ul{
+  list-style-type: none;
+}
 
 
 .top{

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import it.uniroma3.siw.museo.model.Credentials;
 import it.uniroma3.siw.museo.model.Utente;
+import it.uniroma3.siw.museo.service.CollezioneService;
 import it.uniroma3.siw.museo.service.CredentialsService;
 import it.uniroma3.siw.museo.service.UtenteService;
 
@@ -29,6 +30,9 @@ public class AuthenticationController {
 
 	@Autowired
 	private CredentialsValidator credentialsValidator;
+	
+	@Autowired
+	private CollezioneService collezioneService;
 
 	@RequestMapping(value = "/register", method = RequestMethod.GET) 
 	public String showRegisterForm (Model model) {
@@ -55,6 +59,7 @@ public class AuthenticationController {
 		if (credentials.getRole().equals(Credentials.ADMIN_ROLE)) {
 			return "admin/home.html";
 		}
+		model.addAttribute("collezioni", collezioneService.findAll());
 		return "home.html";
 	}
 

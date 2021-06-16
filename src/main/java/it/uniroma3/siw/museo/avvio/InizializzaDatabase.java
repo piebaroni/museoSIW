@@ -22,7 +22,7 @@ import it.uniroma3.siw.museo.model.Utente;
 import it.uniroma3.siw.museo.model.Credentials;
 
 @Component
-public class InizializzaDatabase implements ApplicationListener<ContextRefreshedEvent>{
+public class InizializzaDatabase/* implements ApplicationListener<ContextRefreshedEvent>*/{
 	
 	@Autowired
 	private UtenteService us;
@@ -43,7 +43,7 @@ public class InizializzaDatabase implements ApplicationListener<ContextRefreshed
 	private CuratoreService cus;
 	
 	
-
+/*
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 		Utente u1 = new Utente();
@@ -174,6 +174,6 @@ public class InizializzaDatabase implements ApplicationListener<ContextRefreshed
 		os.inserisci(o4);
 		
 		
-	}
+	}*/
 
 }
