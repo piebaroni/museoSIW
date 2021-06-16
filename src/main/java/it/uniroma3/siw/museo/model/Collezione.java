@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 public class Collezione {
 	
@@ -31,7 +33,7 @@ public class Collezione {
 	@ManyToOne
 	private Curatore curatore;
 	
-	@Column(nullable = false)
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate termineMostra;
 
 	@OneToMany(mappedBy = "collezione")
