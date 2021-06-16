@@ -30,7 +30,7 @@
     <li th:each="collezione : ${collezioni}">
       <p class="b" th:text = "|${collezione.nome}:|"> nome-collezione</p>
       <p class="b" th:text = "${collezione.descrizione}">descizione-collezione </p>
-      <p class="c"> termina 30/7/21 </p>
+      <p class="c" th:text = "${collezione.termineMostra}">termine-collezione </p>
       <p id="spazio"></p>
     </li>
   </ul>

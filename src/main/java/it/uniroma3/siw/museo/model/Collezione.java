@@ -1,5 +1,6 @@
 package it.uniroma3.siw.museo.model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +31,9 @@ public class Collezione {
 	@ManyToOne
 	private Curatore curatore;
 	
+	@Column(nullable = false)
+	private LocalDate termineMostra;
+
 	@OneToMany(mappedBy = "collezione")
 	private List<Opera> opere;
 	
@@ -88,5 +92,11 @@ public class Collezione {
 	public void setDescrizioneCorrente(String descrizioneCorrente) {
 		this.descrizioneCorrente = descrizioneCorrente;
 	}
+	public LocalDate getTermineMostra() {
+		return termineMostra;
+	}
 
+	public void setTermineMostra(LocalDate termineMostra) {
+		this.termineMostra = termineMostra;
+	}
 }
