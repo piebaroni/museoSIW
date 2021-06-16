@@ -82,6 +82,7 @@ public class InizializzaDatabase/* implements ApplicationListener<ContextRefresh
 		
 		Collezione co1= new Collezione();
 		co1.setCuratore(cu1);
+		co1.setTermineMostra(LocalDate.of(2021, 12, 12));
 		co1.setNome("Astrattismo");
 		co1.setDescrizione("Inizio 900");
 		co1.setDescrizioneCorrente("L'Astrattismo è un movimento artistico che nasce nei primi anni del XX secolo, in zone della Germania abbastanza lontane tra loro, dove si sviluppò senza intenti comuni. "
