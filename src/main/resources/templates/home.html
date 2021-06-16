@@ -23,17 +23,27 @@
     <img class="quadro4" src="https://www.theartpostblog.com/wp-content/uploads/2017/07/Red-Balloon-paul-klee.jpg">
     </img>
   </nav>
-  <p class="a">Mostre Correnti </p>
+   <div id="secondaParte">
+  <div id="casella">
+<p class="a">Mostre Correnti </p>
   <ul>
     <li th:each="collezione : ${collezioni}">
-      
       <p class="b" th:text = "|${collezione.nome}:|"> nome-collezione</p>
-      <p class="b" th:text = "${collezione.descrizione}">L'inizio del 900 </p>
-      <p class="c"> termina 30/7/21 </p>
+      <p class="b" th:text = "${collezione.descrizione}">descizione-collezione </p>
+      <p class="c" th:text = "${collezione.termineMostra}">termine-collezione </p>
       <p id="spazio"></p>
     </li>
   </ul>
-  <p class="news"> ultime notizie</p>
+  </div>
+ <div id="casella2">
+   <p id="titolo"> Orari apertura</p>
+   <div id="casella3">
+     <p id="giorni">Martedì-Domenica<p>
+     <p id="giorni">10:00AM- 18:30AM </p>
+     <p> Il lunedì siamo aperti solo su appuntamento </p>
+   </div>
+  </div>
+  </div>
   <footer th:replace="fragments/base.html :: fondo"></footer>
 </body>
 
